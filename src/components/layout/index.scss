@@ -3,21 +3,41 @@
   width: 100%;
 }
 
+@mixin paddingSize{
+  padding: 0 16px
+}
+
+@mixin flexCenter {
+  
+}
+
 #fina_header{
   background: #fff;
   display: flex;
   padding: 0;
   border-bottom: 1px solid #ccc;
+  height: 56px;
+  font-size: 16px;
+  align-items: center;
   .header_icon{
     width: 200px;
     border-right: 1px solid #ccc;
     text-align: center;
     font-size: 30px;
+    @include paddingSize;
+  }
+  .header_content{
+    @include paddingSize;
+    display: flex;
   }
 }
 
 #fina_sider{
   background: #fff;
+}
+
+#fina_content{
+  @include paddingSize;
 }
 
 #fina_footer{

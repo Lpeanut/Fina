@@ -2,13 +2,22 @@
   <Layout id="fina_layout">
     <Header id="fina_header">
       <div class="header_icon">FINA</div>
-      <div class="header_content">Header</div>
+      <div class="header_content">
+        <div class="header_content_left"></div>
+        <div class="header_content_right">
+          <div class="header_content_right_icons">
+            <Icon type="ios-mail" />
+          </div>
+        </div>
+      </div>
     </Header>
     <Layout>
       <Sider id="fina_sider" v-model="hideSider" :collapsible="true" hide-trigger>
         <Menu :collapse="hideSider"></Menu>
       </Sider>
-      <Content>Content</Content>
+      <Content id="fina_content">
+        <router-view></router-view>
+      </Content>
     </Layout>
     <Footer id="fina_footer">
       fiNa
@@ -18,7 +27,7 @@
 
 <script>
 import './index.scss'
-import Menu from '../menu'
+import Menu from '@c/menu'
 export default {
   components: {
     Menu
